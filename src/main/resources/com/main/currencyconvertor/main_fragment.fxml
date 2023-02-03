@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainLayout" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="349.0" minWidth="400.0"
+            prefHeight="349.0" prefWidth="400.0" style="-fx-background-color: #808080;" xmlns="http://javafx.com/javafx/19"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.main.currencyconvertor.presentation.ui.CurrencyConverterController">
+   <Button fx:id="btnConvert" layoutX="18.0" layoutY="279.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="363.0" text="Convert">
+      <font>
+         <Font size="19.0" />
+      </font>
+   </Button>
+   <Label fx:id="tvFrom" layoutX="38.0" layoutY="71.0" text="From:" textFill="WHITE">
+      <font>
+         <Font size="21.0" />
+      </font>
+   </Label>
+   <AnchorPane layoutX="37.0" layoutY="103.0" prefHeight="44.0" prefWidth="326.0">
+      <ChoiceBox fx:id="cbFromCurrent" prefHeight="40.0" prefWidth="146.0"/>
+      <TextField fx:id="etFromValue" layoutX="150.0" minHeight="40.0" minWidth="150.0" prefHeight="40.0" prefWidth="176.0" />
+   </AnchorPane>
+   <Label fx:id="tvTo" layoutX="36.0" layoutY="172.0" text="To:" textFill="WHITE">
+      <font>
+         <Font size="21.0" />
+      </font>
+   </Label>
+   <AnchorPane layoutX="37.0" layoutY="204.0" prefHeight="44.0" prefWidth="326.0">
+      <ChoiceBox fx:id="cbToCurrent" layoutY="2.0" prefHeight="40.0" prefWidth="146.0"/>
+      <TextField fx:id="etToValue" layoutX="149.0" layoutY="2.0" minHeight="40.0" minWidth="150.0" prefHeight="40.0" prefWidth="176.0" />
+   </AnchorPane>
+   <Label fx:id="tvTitle" layoutX="64.0" layoutY="14.0" text="Currently Conventor">
+      <font>
+         <Font size="33.0" />
+      </font>
+   </Label>
+</AnchorPane>
