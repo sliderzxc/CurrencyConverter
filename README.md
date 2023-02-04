@@ -1,3 +1,3 @@
 # CurrencyConventer
 
-It's a simple currency conventer application (Desktop)
+It's a simple currency converter application (Desktop)
