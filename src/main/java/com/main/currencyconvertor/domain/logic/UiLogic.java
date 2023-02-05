@@ -5,6 +5,8 @@ import com.main.currencyconvertor.domain.service.NetworkService;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
 
+import java.text.DecimalFormat;
+
 public class UiLogic {
 
     NetworkService networkService = new NetworkService();
@@ -38,8 +40,8 @@ public class UiLogic {
         String fromCurrency = cbFromCurrency.getValue();
         String toCurrency = cbToCurrency.getValue();
         CurrencyData currencyData = networkService.convertCurrency(fromCurrency, toCurrency);
-        Double value = Double.parseDouble(etFromCurrency.getText());
-        String result = String.valueOf((value*currencyData.getConversion_rate()));
+        Double value = Double.parseDouble(etFromCurrency.getText().replace(",", "."));
+        String result = String.format("%.2f", value*currencyData.getConversion_rate()).replace(",", ".");
         etToCurrency.setText(result);
     }
 }

@@ -17,21 +17,18 @@ public class NetworkService {
 
         HttpClient httpClient = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
-                .GET()
-                .uri(uri)
-                .build();
+            .GET()
+            .uri(uri)
+            .build();
         ObjectMapper objectMapper = new ObjectMapper();
 
         try {
             HttpResponse<String> response = httpClient.send(
-                    request, HttpResponse.BodyHandlers.ofString(StandardCharsets.UTF_8)
+                request, HttpResponse.BodyHandlers.ofString(StandardCharsets.UTF_8)
             );
-            System.out.println(response.body());
             return objectMapper.readValue(response.body(), new TypeReference<>() {});
         } catch (Exception e) {
-            System.out.println(e.getMessage());
-            System.out.println(e.getLocalizedMessage());
-            return new CurrencyData("", "", "", 0L, "", 0L, "", "", "", 0.0);
+            return CurrencyData.empty();
         }
     }
 }

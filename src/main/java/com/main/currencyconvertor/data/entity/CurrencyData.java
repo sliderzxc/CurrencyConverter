@@ -37,8 +37,10 @@ public class CurrencyData {
         this.conversion_rate = conversion_rate;
     }
 
-    public CurrencyData() {
+    public CurrencyData() {}
 
+    public static CurrencyData empty() {
+        return new CurrencyData("", "", "", 0L, "", 0L, "", "", "", 0.0);
     }
 
     public String getResult() {

@@ -1,8 +1,6 @@
 package com.main.currencyconvertor.presentation.ui;
 
 import com.main.currencyconvertor.domain.logic.UiLogic;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
